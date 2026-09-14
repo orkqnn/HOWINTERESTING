@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>◆</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="glitch-screen">
+  <div class="static-noise"></div>
+  <p class="glitch-text" data-text="SIGNAL LOST">SIGNAL LOST</p>
+  <p class="flavor">
+    <!-- the signal keeps repeating, waiting for someone paying attention -->
+  </p>
+</div>
+
+<div id="hub" hidden>
+  <h1>reconstruction in progress</h1>
+  <canvas id="composite" width="252" height="252"></canvas>
+
+  <div class="puzzle" id="p-magenta">
+    <h2>fragment / magenta</h2>
+    <p class="flavor-text" id="zw-text"></p>
+    <input type="text" placeholder="answer">
+    <button onclick="tryUnlock('p-magenta','ECHO',['magenta'])">submit</button>
+  </div>
+
+  <div class="puzzle" id="p-red">
+    <h2>fragment / red</h2>
+    <p>something didn't want to be found. check what wasn't supposed to be crawled.</p>
+    <input type="text" placeholder="answer">
+    <button onclick="tryUnlock('p-red','STATIC',['red'])">submit</button>
+  </div>
+
+  <div class="puzzle" id="p-green">
+    <h2>fragment / green</h2>
+    <div class="static-noise small"></div>
+    <input type="text" placeholder="answer">
+    <button onclick="tryUnlock('p-green','PULSE',['green'])">submit</button>
+  </div>
+
+  <div class="puzzle" id="p-blue">
+    <h2>fragment / blue</h2>
+    <p>UHODB</p>
+    <p class="hint">(shift your perspective)</p>
+    <input type="text" placeholder="answer">
+    <button onclick="tryUnlock('p-blue','RELAY',['blue'])">submit</button>
+  </div>
+
+  <div class="puzzle hard" id="p-hard">
+    <h2>fragment / cyan + yellow + black</h2>
+    <p>this one isn't on the page. it's in the past.</p>
+    <input type="text" placeholder="answer">
+    <button onclick="tryUnlock('p-hard','VESSEL',['cyan','yellow','black'])">submit</button>
+  </div>
+
+  <p id="final-msg" hidden>all fragments recovered. scan what remains.</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
